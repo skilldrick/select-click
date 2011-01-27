@@ -13,10 +13,10 @@
       var dx = Math.abs(e.pageX - prevX);
       var dy = Math.abs(e.pageY - prevY);
       if (dx < clickTolerance && dy < clickTolerance) {
-        clickCallback();
+        clickCallback && clickCallback();
       }
       else {
-        selectCallback();
+        selectCallback && selectCallback();
       }
     });
   };
